@@ -1,5 +1,5 @@
 {
-  "name": "Fatsoma/wp-cli-template",
+  "name": "fatsoma/wp-cli-template",
   "description": "Find, list and update templates for WP-CLI",
   "type": "wp-cli-package",
   "homepage": "https://github.com/Fatsoma/wp-cli-template",
