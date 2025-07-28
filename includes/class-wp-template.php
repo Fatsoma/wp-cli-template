@@ -9,8 +9,11 @@ class Template_Command extends WP_CLI_Command {
     private $_wpdb;
 
     public function __construct() {
-        $this->_wpdb = $GLOBALS['wpdb'];
-        $this->_table_prefix = $GLOBALS['table_prefix'];
+        global $table_prefix,
+            $wpdb;
+
+        $this->_wpdb = $wpdb;
+        $this->_table_prefix = $table_prefix;
     }
 
     /**
