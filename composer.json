@@ -1,25 +1,31 @@
-
 {
-    "name": "timhysniu/wp-cli-template",
-    "description": "Find, list and update templates for WP-CLI",
-    "type": "wp-cli-package",
-    "homepage": "https://github.com/timhysniu/wp-cli-template",
-    "license": "MIT",
-    "require": {
-        "php": ">=5.4"
-    },
-    "authors": [
+  "name": "Fatsoma/wp-cli-template",
+  "description": "Find, list and update templates for WP-CLI",
+  "type": "wp-cli-package",
+  "homepage": "https://github.com/Fatsoma/wp-cli-template",
+  "license": "MIT",
+  "authors": [
     {
-        "name": "Tim Hysniu",
-        "email": "tim@hysniu.com"
-    }
-    ],
-    "minimum-stability": "dev",
-    "autoload": {
-        "files": [ "command.php" ]
+      "name": "Bill Ruddock",
+      "email": "bill.ruddock@fatsoma.com",
+      "role": "Developer"
     },
-    "require": {},
-    "require-dev": {
-        "behat/behat": "~2.5"
+    {
+      "name": "Tim Hysniu",
+      "email": "tim@hysniu.com",
+      "role": "Upstream Developer"
     }
+  ],
+  "minimum-stability": "dev",
+  "autoload": {
+    "files": [
+      "command.php"
+    ]
+  },
+  "require": {
+    "php": ">=5.4"
+  },
+  "require-dev": {
+    "behat/behat": "~2.5"
+  }
 }
