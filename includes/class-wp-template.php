@@ -9,8 +9,11 @@ class Template_Command extends WP_CLI_Command {
     private $_wpdb;
 
     public function __construct() {
-        $this->_wpdb = $GLOBALS['wpdb'];
-        $this->_table_prefix = $GLOBALS['table_prefix'];
+        global $table_prefix,
+            $wpdb;
+
+        $this->_wpdb = $wpdb;
+        $this->_table_prefix = $table_prefix;
     }
 
     /**
@@ -163,7 +166,8 @@ class Template_Command extends WP_CLI_Command {
             $limit = 'LIMIT ' . intval($assoc_args['limit']);
         }
 
-        $sql = "UPDATE `wp_postmeta` SET `meta_value` = $new_template WHERE $where $limit";
+        $table = $this->_table_prefix . 'postmeta';
+        $sql = "UPDATE `$table` SET `meta_value` = $new_template WHERE $where $limit";
         $result = $this->_wpdb->query($sql);
 
         WP_CLI::success( "Sucessfully executed. $result posts updated." );
